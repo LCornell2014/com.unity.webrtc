@@ -96,7 +96,7 @@ namespace Unity.WebRTC
             }
         }
 
-        internal class AudioStreamRenderer : IDisposable
+        public class AudioStreamRenderer : IDisposable
         {
             private bool disposed;
 
@@ -201,6 +201,7 @@ namespace Unity.WebRTC
 
         readonly AudioCustomFilter _audioCapturer;
         internal AudioStreamRenderer _streamRenderer;
+        public AudioStreamRenderer StreamRenderer => _streamRenderer;
         internal AudioTrackSource _trackSource;
 
         /// <summary>
